@@ -8,7 +8,7 @@ const Navbar = () => {
           z-10 w-full py-5 px-8 text-md font-light top-0">
           <ul className="flex items-center gap-3">
             <li className="font-semibold text-lg">
-              <NavLink to="/">YOUR PROJECT NAME HERE</NavLink>
+              <NavLink to="/">Scheming-wizard</NavLink>
             </li>
             <li>c
             <NavLink to="/"
