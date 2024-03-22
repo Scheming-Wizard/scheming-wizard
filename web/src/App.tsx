@@ -7,6 +7,7 @@ import MyOrder from './Pages/MyOrder';
 import MyOrders from './Pages/MyOrders';
 import NotFound from './Pages/NotFound';
 import SignIn from './Pages/SignIn';
+import Navbar from './Components/Navbar/Index';
 
 const AppRoutes = () => {
   let routes = useRoutes( [
@@ -20,7 +21,13 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <>
+    <Router>
+      <Navbar/>
+      <AppRoutes/>
+    <Router/>
+      );
+      }
+      {/*    <>
       <div className='bg-gray-500'>Hello, World!</div>
       <div className ='flex flex-col'>
       <Home/>
@@ -33,5 +40,6 @@ function App() {
     </>
   );
 }
-
+*/}
+      
 export default App;
