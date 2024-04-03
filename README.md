@@ -1,4 +1,0 @@
-# Scheming Wizard
-
-## Description
-
