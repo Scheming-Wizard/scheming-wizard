@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Scheming.Wizard.Domain.Catalog
+using Scheming.Wizard.Domain.Catalog;
 
 namespace Scheming.Wizard.Api.Controllers;
 {
@@ -7,6 +7,10 @@ namespace Scheming.Wizard.Api.Controllers;
     [Route("api/[controller]")]
     public class CatalogController : ControllerBase
     {
-        
+        [HttpGet]
+        public IActionResult GetItems()
+        {
+            return Ok("Hello World!");
+        }
     }
 }

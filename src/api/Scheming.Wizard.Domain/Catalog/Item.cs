@@ -14,22 +14,22 @@ public class Item
     {
         if(string.IsNullOrWhiteSpace(Name))
         {
-            throw new ArgumentException("name is required")
+            throw new ArgumentException("name is required");
         }
 
         if(string.IsNullOrWhiteSpace(Description))
         {
-            throw new ArgumentException("description is required")
+            throw new ArgumentException("description is required");
         }
 
         if(string.IsNullOrWhiteSpace(Brand))
         {
-            throw new ArgumentException("Brand is required")
+            throw new ArgumentException("Brand is required");
         }
 
         if(Price <= 0)
         {
-            throw new ArgumentException("Price cannot be 0 or negative")
+            throw new ArgumentException("Price cannot be 0 or negative");
         }
 
         Name = name;

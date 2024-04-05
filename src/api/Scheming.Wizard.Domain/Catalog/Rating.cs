@@ -1,4 +1,4 @@
-namespace Scheming.Wizard.Domain.Catalog
+namespace Scheming.Wizard.Domain.Catalog;
 
 public class Rating
 {
@@ -10,12 +10,12 @@ public class Rating
     {
         if(stars < 1 || stars > 5)
         {
-            throw new ArgumentException("Stars must be between 1 and 5")
+            throw new ArgumentException("Stars must be between 1 and 5");
         }
 
         if(string.IsNullOrWhiteSpace(userName))
         {
-            throw new ArgumentException("user name is required")
+            throw new ArgumentException("user name is required");
         }
 
         Stars = stars;
