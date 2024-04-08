@@ -7,8 +7,6 @@ public class Item
     public string Description { get; set; }
     public string Brand { get; set; }
     public decimal Price { get; set; }
-    public required string Brand { get; set; }
-    public decimal Price { get; set; }
     public List<Rating> Ratings { get; set; } = new List<Rating>();
     public Item(string name, string description, string brand, decimal price)
     {
@@ -36,7 +34,6 @@ public class Item
         Description = description;
         Brand = brand;
         Price = price;
-        Id = id;
     }
 
     public void AddRating(Rating rating)
