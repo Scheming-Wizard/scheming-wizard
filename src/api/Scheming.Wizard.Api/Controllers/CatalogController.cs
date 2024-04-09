@@ -36,4 +36,36 @@ namespace Scheming.Wizard.Api.Controllers;
         {
             return CreatedAtAction(nameof(GetItem), new { id = 42 }, item);
         }
+
+        [HttpPost("{id:int}/ratings")]
+        public IActionResult AddRating(int id, Rating rating)
+        {
+            return Ok();
+        }
+
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateItem(int id, Item item)
+        {
+        /*    if (id != item.Id)
+            {
+                return BadRequest();
+            }
+            
+            var existingItem = _context.Items.Find(id);
+            if (existingItem == null)
+            {
+                return NotFound();
+            }
+            
+            _context.Entry(existingItem).CurrentValues.SetValues(item);
+            _context.SaveChanges();
+            return Ok(item); */
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteItem(int id)
+        {
+            return NoContent();
+        }
     }
