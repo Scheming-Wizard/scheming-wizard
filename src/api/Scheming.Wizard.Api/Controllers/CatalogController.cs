@@ -30,4 +30,10 @@ namespace Scheming.Wizard.Api.Controllers;
             }
             return Ok(item);
         }
+
+        [HttpPost]
+        public IActionResult CreateItem(Item item)
+        {
+            return CreatedAtAction(nameof(GetItem), new { id = 42 }, item);
+        }
     }
