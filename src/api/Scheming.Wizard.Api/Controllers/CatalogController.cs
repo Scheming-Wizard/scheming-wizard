@@ -19,6 +19,9 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpGet]
         public IActionResult GetItems()
         {
+            {
+                return Ok(_context.Items);
+            }
             var items = new[]
             {
                 new Item(name: "Item 1", description: "Description 1", brand: "Brand 1", price: 100.00m),
@@ -59,7 +62,7 @@ namespace Scheming.Wizard.Api.Controllers;
             {
                 return BadRequest();
             }
-            asddas
+        
             var existingItem = _context.Items.Find(id);
             if (existingItem == null)
             {
