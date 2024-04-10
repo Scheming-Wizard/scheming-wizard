@@ -1,7 +1,16 @@
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Scheming.Wizard.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
+builder.Services.AddDbContext<StoreContext>(options =>
+{
+    options.UseSqlite("Data Source=../store.db",
+    m => m.MigrationsAssembly("Scheming.Wizard.Api"));
+    
+});
 
 builder.Services.AddSwaggerGen(c =>
 {
