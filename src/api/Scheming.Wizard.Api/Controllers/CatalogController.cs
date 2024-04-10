@@ -19,6 +19,7 @@ namespace Scheming.Wizard.Api.Controllers;
                 new Item(name: "Item 5", description: "Description 5", brand: "Brand 5", price: 500.00m)
             };
             return Ok(items);
+            //return Ok("Hello World!");
         }
 
         [HttpGet("{id:int}")]
@@ -46,20 +47,6 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpPut("{id:int}")]
         public IActionResult UpdateItem(int id, Item item)
         {
-        /*    if (id != item.Id)
-            {
-                return BadRequest();
-            }
-            asddas
-            var existingItem = _context.Items.Find(id);
-            if (existingItem == null)
-            {
-                return NotFound();
-            }
-            
-            _context.Entry(existingItem).CurrentValues.SetValues(item);
-            _context.SaveChanges();
-            return Ok(item); */
             return NoContent();
         }
 

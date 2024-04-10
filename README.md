@@ -1,4 +1,4 @@
-# Sheming-Wizard
+# Scheming-Wizard
 
 # Description
 
