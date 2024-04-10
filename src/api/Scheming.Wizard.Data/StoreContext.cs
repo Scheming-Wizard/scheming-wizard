@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Onyx.Drum.Domain.Catalog;
+using Scheming.Wizard.Domain.Catalog;
 
-namespace Onyx.Drum.Data;
+namespace Scheming.Wizard.Data;
 
 public class StoreContext : DbContext
 {
@@ -10,5 +10,5 @@ public class StoreContext : DbContext
 
     }
 
-    public DbSet<Item? Items { get; set; }
+    public DbSet<Item> Items { get; set; }
 }
