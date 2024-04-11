@@ -59,7 +59,14 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpPost("{id:int}/ratings")]
         public IActionResult AddRating(int id, Rating rating)
         {
-            return Ok();
+            var item = _context.Items.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            item.AddRating(rating);
+            _context.SaveChanges();
+            return Ok(item);
         }
 
         [HttpPut("{id:int}")]
