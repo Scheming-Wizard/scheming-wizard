@@ -72,7 +72,7 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpPut("{id:int}")]
         public IActionResult UpdateItem(int id, Item item)
         {
-        /*    if (id != item.Id)
+            if (id != item.Id)
             {
                 return BadRequest();
             }
@@ -85,8 +85,8 @@ namespace Scheming.Wizard.Api.Controllers;
             
             _context.Entry(existingItem).CurrentValues.SetValues(item);
             _context.SaveChanges();
-            return Ok(item); */
-            return NoContent();
+            return Ok(item); 
+            
         }
 
         [HttpDelete("{id:int}")]
