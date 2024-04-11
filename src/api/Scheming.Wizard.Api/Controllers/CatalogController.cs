@@ -51,7 +51,9 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpPost]
         public IActionResult CreateItem(Item item)
         {
-            return CreatedAtAction(nameof(GetItem), new { id = 42 }, item);
+            _context.Items.Add(item);
+            _context.SaveChanges();
+            return Created($"api/catalot/{item.Id}", item);
         }
 
         [HttpPost("{id:int}/ratings")]
