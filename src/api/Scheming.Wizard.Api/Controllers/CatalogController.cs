@@ -92,6 +92,14 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpDelete("{id:int}")]
         public IActionResult DeleteItem(int id)
         {
+            var item = _context.Items.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _context.Items.Remove(item);
+            _context.SaveChanges();
             return NoContent();
         }
     }
