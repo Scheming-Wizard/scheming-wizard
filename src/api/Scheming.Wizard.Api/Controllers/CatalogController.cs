@@ -19,7 +19,6 @@ namespace Scheming.Wizard.Api.Controllers;
                 new Item(name: "Item 5", description: "Description 5", brand: "Brand 5", price: 500.00m)
             };
             return Ok(items);
-            //return Ok("Hello World!");
         }
 
         [HttpGet("{id:int}")]
