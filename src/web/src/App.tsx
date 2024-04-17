@@ -1,3 +1,4 @@
+import {useRoutes, BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import MyAccount from './pages/MyAccount';
@@ -6,9 +7,21 @@ import MyOrders from './pages/MyOrders';
 import NotFound from './pages/NotFound';
 import SignIn from './pages/SignIn';
 
+const AppRoutes = () => {
+  const routes = useRoutes([
+    { path: '/', element: <Home /> },
+    { path: '/my-account', element: <MyAccount /> },
+    { path: '/my-order', element: <MyOrder /> },
+    { path: '/my-orders', element: <MyOrders /> },
+    { path: '/sign-in', element: <SignIn /> },
+    { path: '*', element: <NotFound /> },
+  ]);
+  return routes;
+};
+
 function App() {
   return (
-    <>
+/*    <>
       <div className='flex flex-col'>
         <Home/>
         <MyAccount/>
@@ -17,7 +30,10 @@ function App() {
         <NotFound/>
         <SignIn/>
       </div>
-    </>
+    </> */
+    <Router>
+      <AppRoutes/>
+    </Router>
   );
 }
 
