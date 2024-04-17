@@ -19,7 +19,7 @@ namespace Scheming.Wizard.Api.Controllers;
         [HttpGet]
         public IActionResult GetItems()
         {
-            if (_context.Items != null)
+        /*    if (_context.Items != null)
             {
                 return Ok(_context.Items);
             }
@@ -33,8 +33,9 @@ namespace Scheming.Wizard.Api.Controllers;
                     new Item(name: "Item 4", description: "Description 4", brand: "Brand 4", price: 400.00m),
                     new Item(name: "Item 5", description: "Description 5", brand: "Brand 5", price: 500.00m)
                 };
-                return Ok(items);
-            }
+                return Ok(items); 
+            } */
+            return Ok(_context.Items);
         }
 
         [HttpGet("{id:int}")]
