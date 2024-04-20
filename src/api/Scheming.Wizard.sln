@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheming.Wizard.Api", "Sche
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheming.Wizard.Data", "Scheming.Wizard.Data\Scheming.Wizard.Data.csproj", "{740F3800-1123-4B65-A02E-1C27B8867197}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED05437E-B382-4BE8-8FDC-B2D66061A42A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheming.Wizard.Domain.Tests", "tests\Scheming.Wizard.Domain.Tests\Scheming.Wizard.Domain.Tests.csproj", "{B63B2833-1E2C-4E01-8C21-1C887E754608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{740F3800-1123-4B65-A02E-1C27B8867197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{740F3800-1123-4B65-A02E-1C27B8867197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{740F3800-1123-4B65-A02E-1C27B8867197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63B2833-1E2C-4E01-8C21-1C887E754608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63B2833-1E2C-4E01-8C21-1C887E754608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63B2833-1E2C-4E01-8C21-1C887E754608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63B2833-1E2C-4E01-8C21-1C887E754608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B63B2833-1E2C-4E01-8C21-1C887E754608} = {ED05437E-B382-4BE8-8FDC-B2D66061A42A}
 	EndGlobalSection
 EndGlobal
