@@ -4,11 +4,11 @@ Content-Type: application/json
 {
     "name": "Test",
     "description": "Test description",
-    "brand": "Test brant",
+    "brand": "Test brand",
     "price": 10.0
 }
 
-POST http://localhost:5264/api/catalog HTTP/1.1
+POST http://localhost:5264/api/catalog/2/ratings HTTP/1.1
 Content-Type: application/json
 
 {
