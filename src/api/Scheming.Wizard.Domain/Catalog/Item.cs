@@ -10,22 +10,22 @@ public class Item
     public List<Rating> Ratings { get; set; } = new List<Rating>();
     public Item(string name, string description, string brand, decimal price)
     {
-        if(string.IsNullOrWhiteSpace(Name))
+        if (string.IsNullOrWhiteSpace(name))
         {
             throw new ArgumentException("name is required");
         }
 
-        if(string.IsNullOrWhiteSpace(Description))
+        if (string.IsNullOrWhiteSpace(description))
         {
             throw new ArgumentException("description is required");
         }
 
-        if(string.IsNullOrWhiteSpace(Brand))
+        if (string.IsNullOrWhiteSpace(brand))
         {
             throw new ArgumentException("Brand is required");
         }
 
-        if(Price <= 0)
+        if (price <= 0)
         {
             throw new ArgumentException("Price cannot be 0 or negative");
         }
