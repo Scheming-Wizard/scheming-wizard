@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Scheming.Wizard.Domain\Scheming.Wizard.Domain.csproj" />
+    <ProjectReference Include="..\..\src\api\Scheming.Wizard.Domain\Scheming.Wizard.Domain.csproj" />
   </ItemGroup>
 
 </Project>
