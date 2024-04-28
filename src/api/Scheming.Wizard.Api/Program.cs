@@ -11,6 +11,16 @@ builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlite("Data Source=../store.db", m => m.MigrationsAssembly("Scheming.Wizard.Api"));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:5173")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Scheming Wizard API", Version = "v1" });
@@ -19,11 +29,9 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Scheming Wizard API v1"));
-app.MapControllers();
 
-app.Run();
+app.UseCors();
 
-//app.MapGet("/", () => "Hello World!");
 app.MapControllers();
 
 // Remove the app.Run() statement
