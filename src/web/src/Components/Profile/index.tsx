@@ -7,12 +7,15 @@ const Profile = () => {
     return <div>Loading ...</div>;
   }
 
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return (
     isAuthenticated && (
-      <div>
-        <img src={user?.picture} alt={user?.name} />
-        <h2>{user?.name}</h2>
-        <p>{user?.email}</p>
+      <div className="flec items-center justify-center">
+        <img src={user?.picture} alt={user?.name} 
+         className="w-10 h10 rounded full"/>
       </div>
     )
   );
