@@ -8,4 +8,7 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule: 
-      interval: "weekly" 
+      interval: "weekly"
+      on: # Add the missing 'on' property
+        schedule:
+          - cron: "0 0 * * 0" # Run every Sunday at midnight
